@@ -1,7 +1,142 @@
-
-html {
-    font-size: 62.5%;
-    font-family: 'Roboto Mono', monospace;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    font-family: Hack, monospace;
 }
-
+  
+div {
+    color: #727272;
+    text-align: center;
+}
+  
+.name {
+    margin: 16px;
+    font-size: 96px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+}
+.name::before {
+    content: attr(data-item);
+    transition: all 1s ease-in-out;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+.name:hover::before {
+    width: 100%;
+}
+  
+nav {
+    margin: 25px;
+    background: #f9f9f9;
+    padding: 16px;
+}
+nav .menuItems {
+    list-style: none;
+    display: flex;
+ }
+nav .menuItems li {
+    margin: 0px 50px;
+}
+nav .menuItems li a {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+nav .menuItems li a::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+nav .menuItems li a:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+/* Name Header */
+.name-header {
+    display: flex;
+    border-bottom: #ccc solid 2px;
+}
+/* Header */
+h2 {
+    font-size: 32px;
+    margin: 20px;
+}
+/* Cards */
+.contentCard {
+    margin: 50px;
+    border: 3px solid #8254ff;
+    border-radius: 25px;
+    width: 80vw;
+    max-width: 750px;
+}
+.contentCard:hover {
+    box-shadow: 0px 0px 80px 10px #8254ff;
+    transition: all 0.5s ease-in-out;
+}
+.skill-item {
+    display: flex;
+    align-items: center;
+}
+/* Text */
+p {
+    margin: 25px;
+    font-size: 24px;
+}
+/* Circles */
+.circleFull {
+    border: #8254ff solid 3px;
+    width: 25px;
+    height: 25px;
+    background-color: #8254ff;
+    border-radius: 25px;
+    margin: 10px;
+}
+.circleEmpty {
+    border: #ccc solid 3px;
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    margin: 10px;
+}
+/* Divider */
+.divider {
+    border-bottom: 5px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+    margin: 20px;
+}
+.skill-name {
+    width: 200px;
+}
+.skill-item:last-of-type {
+    margin-bottom: 10px;
+}
